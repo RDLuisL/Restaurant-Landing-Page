@@ -1,9 +1,10 @@
 :root {
-    --bg-body: radial-gradient(circle, #f0483a, #d10a20);
+    --bg-body: radial-gradient(#FD4D35, #E32120);
     --btn-color: #fff;
     --btn-color-text: #333;
     --h2-color: #fff;
     --p-color: #fff;
+    --h-color: #d10a20;
 
     
 
@@ -27,7 +28,9 @@ main {
     padding: 30px 100px;
 }
     
-main header {
+header {
+            min-width: 100%;    
+            padding: 20px 70px 20px 20px;
             position: absolute;
             top: 0;
             left: 0;
@@ -55,6 +58,7 @@ header .navigation li {
                 color: #fff;
                 text-decoration: none;
                 margin-left: 40px;
+                font-size: 20px;
                 }
 
 .content {
@@ -62,7 +66,7 @@ header .navigation li {
         width: 100%;
         display: flex;
         
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
         
         }
@@ -76,6 +80,7 @@ header .navigation li {
 .content .btn {
         position: relative;
         display: inline-block;
+        margin-top: 50px;
         padding: 20px 50px;
         background: var(--btn-color);
         color: var(--btn-color-text);
@@ -112,7 +117,6 @@ p {
 
 .content-img {
     position: relative;
-   
     margin-left: 20px;
 }
 
@@ -120,7 +124,56 @@ p {
     width: 100%;
     max-width: 600px;
     display: block;
-
 }
 
+.footer {
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    padding: 30px 0px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 
+.footer .sci {
+    display: flex;
+}
+
+.footer .sci li {
+    list-style: none;
+    margin-top: 0px;
+    padding-inline: 10px;
+}
+
+.footer .sci li a {
+    color: #fff;
+    display: inline-block;
+    transition: 0.25s;
+    
+}
+
+.footer .sci li a:hover {
+    transform: translateY(-5px);
+}
+
+.footer .sci li a img {
+    width: 40px;
+    filter: saturate(0%);
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 20px;
+    }
+    .content h2 {
+        margin-top: 40px;
+    }
+    .main .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .main .footer .sci {
+        margin-top: 40px;
+        margin-right: -80px;
+    }
+}
